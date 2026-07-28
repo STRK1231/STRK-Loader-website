@@ -21,8 +21,8 @@
             --surface:     #0f1014;
             --surface2:    #141519;
             --border:      #1c1e27;
-            --accent:      #6b50e8;
-            --accent-h:    #7d62f5;
+            --accent:      #0037ff;
+            --accent-h:    #5e96ff;
             --text:        #d4d4e4;
             --text-muted:  #5a5a70;
             --text-dim:    #888898;
@@ -62,15 +62,6 @@
 
         .badge.beta{background:rgba(0,55,255,.12);border-color:rgba(94,150,255,.35);color:#5e96ff;}
 
-        .logo .beta-gradient{
-            background:linear-gradient(90deg,#0037ff,#5e96ff);
-            -webkit-background-clip:text;background-clip:text;color:transparent;
-        }
-
-        .btn-buy.btn-buy-beta{background:linear-gradient(90deg,#0037ff,#5e96ff);}
-        .btn-buy.btn-buy-beta:hover{background:linear-gradient(90deg,#1a4dff,#71a3ff);}
-        .btn-buy.btn-buy-beta:active{filter:brightness(.92);}
-
         .badge {
             display: inline-block;
             background: var(--surface2);
@@ -94,7 +85,10 @@
             color: var(--text);
         }
 
-        .logo span { color: var(--accent); }
+        .logo span {
+            background: linear-gradient(90deg, #0037ff, #5e96ff);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
 
         .tagline {
             color: var(--text-dim);
@@ -166,7 +160,7 @@
             display: block;
             width: 100%;
             padding: 12px;
-            background: var(--accent);
+            background: linear-gradient(90deg, #0037ff, #5e96ff);
             color: #fff;
             font-size: 13px;
             font-weight: 600;
@@ -177,7 +171,7 @@
             transition: background .12s;
         }
 
-        .btn-buy:hover { background: var(--accent-h); }
+        .btn-buy:hover { background: linear-gradient(90deg, #1a4dff, #71a3ff); }
         .btn-buy:active { filter: brightness(.92); }
 
         .secure-note {
@@ -226,7 +220,7 @@
         .mod-list-toggle:hover {
             border-color: var(--accent);
             color: var(--text);
-            background: rgba(107, 80, 232, .08);
+            background: rgba(0, 55, 255, .08);
         }
 
         .mod-list-toggle .arrow {
@@ -481,7 +475,7 @@
 
     <div class="card">
         <div class="badge beta">Beta Access</div>
-        <div class="logo">STRK<span class="beta-gradient"> Beta</span></div>
+        <div class="logo">STRK<span> Beta</span></div>
         <div class="tagline">Test new mods and features before public release</div>
 
         <div class="divider"></div>
@@ -499,7 +493,7 @@
             <div class="price-note">BETA ACCESS &nbsp;·&nbsp; ONE-TIME PURCHASE</div>
         </div>
 
-        <a class="btn-buy btn-buy-beta" href="https://buy.stripe.com/fZubJ3gK4bD27NT89Y4gg05" target="_blank" rel="noopener">
+        <a class="btn-buy" href="https://buy.stripe.com/fZubJ3gK4bD27NT89Y4gg05" target="_blank" rel="noopener">
             Become a Beta Tester
         </a>
 
